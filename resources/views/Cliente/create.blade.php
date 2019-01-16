@@ -40,12 +40,20 @@
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="sexo" id="sexo" class="form-control input-sm" placeholder="Sexo">
+										<!--<input type="text" name="sexo" id="sexo" class="form-control input-sm" placeholder="Sexo">-->
+										<select class="form-control input-sm" name="sexo">
+											<option value="Masculino">Masculino</option>
+											<option value="Femenino">Femenino</option>
+										</select>
 									</div>
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<input type="text" name="npagina" id="npagina" class="form-control input-sm" placeholder="Ocupación del id">
+										<select class="form-control input-sm" name="ocupacion_id">
+											<option value="1">Interno</option>
+											<option value="2">Externo</option>
+										</select>
+										<!--<input type="text" name="ocupacion_id" id="ocupacion_id" class="form-control input-sm" placeholder="Ocupación del id">-->
 									</div>
 								</div>
 							</div>
