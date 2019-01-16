@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading login-form">Login</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
@@ -16,8 +16,8 @@
 
                             <div class="col-md-6">
                               <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                              <span class="input-group-addon email-icon"><i class="fa fa-envelope"></i></span>
+                                <input id="email" type="email" class="form-control email" name="email" value="{{ old('email') }}" required autofocus>
                                 </div>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -32,8 +32,8 @@
 
                             <div class="col-md-6">
                               <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
-                                <input id="password" type="password" class="form-control" name="password" required>
+                              <span class="input-group-addon pass-icon"><!--<i class="fa fa-unlock-alt"></i>--></span>
+                                <input id="password" type="password" class="form-control password" name="password" required>
                               </div>
 
                                 @if ($errors->has('password'))

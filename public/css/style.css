@@ -1,0 +1,69 @@
+.login-form {
+	border: 1px solid #fff;
+	border-radius: 5px;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.password{
+  height: 36px;
+}
+/* Input field */
+.email, .password {
+	padding: 15px 25px;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+}
+
+/* Second input field */
+.email-icon {
+	margin-top: 25px;
+}
+
+.email:hover, .password:hover {
+	background: #dfe9ec;
+	color: #414848;
+}
+
+.email:focus, .password:focus {
+	background: #dfe9ec;
+	color: #414848;
+
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.email-icon, .pass-icon {
+  color: white;
+	width: 46px;
+	z-index: -1;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+.email-icon {
+	top:133px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
+	background: rgba(65,72,72,0.75) url(http://www.demo.amitjakhu.com/login-form/images/email-icon.png) no-repeat center;
+}
+
+.pass-icon {
+	top:185px;
+	background: rgba(65,72,72,0.75) url(http://www.demo.amitjakhu.com/login-form/images/pass-icon.png) no-repeat center;
+}
+
+.email:focus + div{
+	left: -46px;
+}
+
+/* Animation */
+.email, .email-icon, .pass-icon, .password {
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+}

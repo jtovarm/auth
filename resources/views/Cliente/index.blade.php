@@ -1,5 +1,14 @@
 @extends('layouts.app')
 @section('content')
+<?php
+$localhost = "localhost";
+$username = "root";
+$password = "";
+$dbname = "proyecto_test";
+
+#Creamos la conexion con la base de datos
+$connect = new mysqli ($localhost, $username, $password, $dbname);
+?>
 <div class="row">
   <section class="content">
     <div class="col-md-8 col-md-offset-2">
@@ -26,7 +35,14 @@
                 <td>{{$cliente->nombre}}</td>
                 <td>{{$cliente->email}}</td>
                 <td>{{$cliente->sexo}}</td>
-                <td>{{$cliente->ocupacion_id}}</td>
+                <?php $query="Select *from ocupacion where id = '1' ";
+                      $result = $connect->query($query);
+                      while($row = $result->fetch_assoc()){
+                  ?>
+                <td><?php echo $row['nombre'];
+                          
+                        }?></td>
+                <!--<td>{{$cliente->ocupacion_id}}</td>-->
                 <td><a class="btn btn-primary btn-xs" href="{{action('ClienteController@edit', $cliente->id)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                 <td>
                   <form action="{{action('ClienteController@destroy', $cliente->id)}}" method="post">
